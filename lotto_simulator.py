@@ -35,7 +35,7 @@ def play_lotto():
     lotto_numbers = generate_lotto_numbers()
     user = get_user_numbers()
 
-    matched_numbers = sum([1 for number in user if number in lotto_numbers])
+    matched_numbers = sum([1 for number in user if number in lotto_numbers])    #Compares user and computer numbers
     return f'Your matched {matched_numbers} numbers, lotto numbers: {lotto_numbers}'
 
 
