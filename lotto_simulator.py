@@ -28,8 +28,15 @@ def get_user_numbers():
     return sorted(user_numbers)
 
 
+def play_lotto():
+    """Takes player and lotto numbers and compares them
+    :return: f string - text message
+    """
+    lotto_numbers = generate_lotto_numbers()
+    user = get_user_numbers()
+
+    matched_numbers = sum([1 for number in user if number in lotto_numbers])
+    return f'Your matched {matched_numbers} numbers, lotto numbers: {lotto_numbers}'
 
 
-
-#print(generate_lotto_numbers())
-print(get_user_numbers())
+print(play_lotto())
